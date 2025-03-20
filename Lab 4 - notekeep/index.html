@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <title>Notatki</title>
+  <link rel="stylesheet" href="site.css">
+</head>
+<body>
+  <button id="addNoteBtn">+</button>
+
+
+  <div id="searchContainer">
+    <input type="text" id="searchInput" placeholder="Szukaj notatek...">
+    <select id="colorFilter">
+      <option value="">Wszystkie kolory</option>
+      <option value="aquamarine">marine</option>
+      <option value="blanchedalmond">almond</option>
+      <option value="coral">coral</option>
+      <option value="yellow">Żółty</option>
+      <option value="khaki">khaki</option>
+    </select>
+  </div>
+
+
+  <div id="notesContainer"></div>
+
+
+  <div id="noteFormModal">
+    <div id="noteFormContainer">
+      <h3>Dodaj notatkę</h3>
+      <form id="noteForm">
+        <label for="noteTitle">Tytuł:</label>
+        <input type="text" id="noteTitle" required>
+
+        <label for="noteContent">Treść:</label>
+        <textarea id="noteContent" rows="4" required></textarea>
+
+        <label for="noteTags">Tagi (oddziel przecinkami):</label>
+        <input type="text" id="noteTags">
+
+        <label for="noteColor">Kolor notatki:</label>
+        <select id="noteColor" required>
+          <option value="aquamarine" style="color:aquamarine;">marine</option>
+          <option value="blanchedalmond" style="color:blanchedalmond;">almond</option>
+          <option value="coral" style="color:coral;">coral</option>
+          <option value="yellow" style="color:goldenrod;">Żółty</option>
+          <option value="khaki" style="color:khaki;">khaki</option>
+        </select>
+
+        <label>
+          <input type="checkbox" id="notePin">
+          Przypnij notatkę
+        </label>
+
+        <br><br>
+        <button type="submit">Zapisz</button>
+        <button type="button" id="cancelBtn">Anuluj</button>
+      </form>
+    </div>
+  </div>
+
+  <script src="main.js"></script>
+</body>
+</html>
