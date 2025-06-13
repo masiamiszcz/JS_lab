@@ -1,0 +1,134 @@
+/* Reset marginesów i czcionka */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    overflow-x: hidden;
+}
+
+/* Przyciski strzałek */
+.arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(255,255,255,0.8);
+    border: 1px solid #888;
+    color: #333;
+    font-size: 18px;
+    padding: 5px 10px;
+    cursor: pointer;
+    user-select: none;
+    z-index: 2;
+}
+.arrow:active {
+    background: rgba(200,200,200,0.8);
+}
+
+/* Kontener na cały slider */
+#slider-container {
+    position: relative;
+    width: 100vw;
+    height: 30vh;
+    overflow: visible;
+    background-color: #f0f0f0;
+    transition: opacity 0.5s ease;
+}
+
+/* Sam slider z trackiem */
+#slider {
+    width: 100%;
+    height: 100%;
+    overflow: visible;
+}
+.slider-track {
+    display: flex;
+    height: 100%;
+    transform: translateX(0);
+}
+
+/* Pojedynczy slajd */
+.slide {
+    flex: 0 0 auto;
+    height: 100%;
+    position: relative;
+    transition: transform 0.3s ease;
+}
+.slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    pointer-events: none;
+}
+.slide:hover {
+    z-index: 1;
+}
+.slide:hover img {
+    transform: scale(1.25);
+}
+
+/* Pozycjonowanie strzałek */
+#leftArrow {
+    left: 10px;
+}
+#rightArrow {
+    right: 10px;
+}
+#modeBtn {
+    right: 60px;
+}
+
+/* Styl dla przycisku Stop */
+#stopBtn {
+    margin: 15px;
+    padding: 8px 16px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+/* Ukrycie slidera przy przenikaniu */
+#slider-container.hidden {
+    opacity: 0;
+}
+
+/* Kontener na kropki poniżej slidera */
+#dots {
+    position: absolute;
+    bottom: 10px;
+    width: 100%;
+    text-align: center;
+}
+.dot {
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    margin: 0 5px;
+    background-color: rgba(0,0,0,0.3);
+    border-radius: 50%;
+    cursor: pointer;
+}
+.dot.active {
+    background-color: rgba(0,0,0,0.8);
+}
+#dots.hidden {
+    display: none;
+}
+
+/* Responsywne zmiany flex-bazy slajdów */
+@media (max-width: 900px) {
+    .slide {
+        flex: 0 0 33.3333%;
+    }
+}
+@media (max-width: 650px) {
+    #slider-container {
+        height: 40vh;
+    }
+    .slide {
+        flex: 0 0 50%;
+    }
+}
+@media (max-width: 400px) {
+    .slide {
+        flex: 0 0 100%;
+    }
+}

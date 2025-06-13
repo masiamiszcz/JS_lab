@@ -1,0 +1,108 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+.container {
+  padding: 20px;
+  max-width: 700px;
+  margin: auto;
+}
+#city-form {
+  position: relative;
+  margin-bottom: 20px;
+}
+#city-input {
+  width: calc(100% - 60px);
+  padding: 8px;
+  font-size: 16px;
+}
+#city-form button {
+  padding: 8px 12px;
+  font-size: 16px;
+  margin-left: 5px;
+}
+#suggestions {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  position: absolute;
+  top: 36px;
+  left: 0;
+  width: calc(100% - 60px);
+  background: #fff;
+  border: 1px solid #ccc;
+  max-height: 150px;
+  overflow-y: auto;
+  z-index: 10;
+}
+#suggestions li {
+  padding: 5px;
+  cursor: pointer;
+}
+#suggestions li:hover {
+  background: #f0f0f0;
+}
+.city-tile {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 10px;
+  margin-bottom: 15px;
+}
+.chart-container {
+  width: 30%;
+  height: 30%;
+}
+.chart-container canvas {
+  width: 100% !important;
+  height: 100% !important;
+}
+.city-info {
+  flex-grow: 1;
+  text-align: center;
+  margin: 0 10px;
+}
+.city-info .header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.city-info h3 {
+  margin: 0;
+}
+.city-info img {
+  display: block;
+  margin: 5px auto;
+  width: 50px;
+  height: 50px;
+}
+.city-info p {
+  margin: 5px 0;
+}
+.remove {
+  background: red;
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  width: 24px;
+  height: 24px;
+  font-size: 16px;
+  line-height: 24px;
+  cursor: pointer;
+}
+@media (max-width: 600px) {
+  .city-tile {
+    flex-direction: column;
+  }
+  .chart-container {
+    width: 100px;
+    height: 100px;
+    margin: 5px 0;
+  }
+  .city-info {
+    margin: 5px 0;
+  }
+}

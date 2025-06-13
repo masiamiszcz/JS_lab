@@ -1,0 +1,57 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 20px;
+}
+h1 {
+    margin-bottom: 20px;
+}
+#keys {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+.key {
+    width: 60px;
+    height: 60px;
+    margin: 5px;
+    background: #fff;
+    border: 2px solid #333;
+    border-radius: 5px;
+    line-height: 60px;
+    font-size: 20px;
+    cursor: pointer;
+    user-select: none;
+    transition: background 0.1s;
+}
+.key:active {
+    background: #ccc;
+}
+#controls {
+    margin-bottom: 20px;
+}
+#channels .channel {
+    border: 1px solid #999;
+    padding: 10px;
+    margin: 10px auto;
+    width: 80%;
+    background: #fff;
+    text-align: left;
+}
+.channel h3 {
+    margin: 0;
+    margin-bottom: 5px;
+}
+.channel label {
+    margin-right: 5px;
+}
+.channel input[type="number"] {
+    width: 60px;
+    margin-right: 10px;
+}
+.channel button {
+    margin-right: 5px;
+    margin-top: 5px;
+}

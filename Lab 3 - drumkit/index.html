@@ -1,16 +1,38 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pl">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Drumkit</title>
+    <title>Drumkit Panda5</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <button id="recording">Start Record</button>
-    <button id="play">Play your sound!</button>
-    <audio src="./sounds/clap.wav" controls data-key="a" data-volume="40" id="clap"></audio>
-    <audio src="./sounds/kick.wav" controls data-key="s" id="kick"></audio>
-    <audio src="./sounds/hihat.wav" controls data-key="d" id="hihat"></audio>
+    <h1>Drumkit Panda5</h1>
+
+    <!-- Klawiatura perkusyjna -->
+    <div id="keys">
+        <div class="key" data-key="A">A</div>
+        <div class="key" data-key="S">S</div>
+        <div class="key" data-key="D">D</div>
+        <div class="key" data-key="F">F</div>
+        <div class="key" data-key="G">G</div>
+        <div class="key" data-key="H">H</div>
+        <div class="key" data-key="J">J</div>
+        <div class="key" data-key="K">K</div>
+        <div class="key" data-key="L">L</div>
+    </div>
+
+    <!-- Kontrolki -->
+    <div id="controls">
+        <button id="add-channel">Dodaj kanał</button>
+        <button id="play-all">Odtwórz wszystko</button>
+        <span>Metronom: <input type="checkbox" id="metronome-toggle"></span>
+        <label for="metronome-toggle">Włącz/wyłącz</label>
+        BPM: <input type="number" id="metronome-bpm" value="120" min="30" max="300">
+    </div>
+
+    <!-- Kanały -->
+    <div id="channels"></div>
+
     <script src="main.js"></script>
 </body>
 </html>

@@ -1,80 +1,113 @@
 body {
     font-family: Arial, sans-serif;
-    margin: 20px;
-  }
-  
-  /* Styl przycisku plusa */
-  #addNoteBtn {
-    font-size: 24px;
-    cursor: pointer;
-    padding: 10px 15px;
-    border: none;
-    border-radius: 50%;
-    background-color: #4CAF50;
+    margin: 0;
+    padding: 0;
+    background: #f0f0f0;
+}
+header {
+    text-align: center;
+    background: #4CAF50;
     color: white;
-  }
-  
-  /* Modal z formularzem */
-  #noteFormModal {
-    display: none; /* domyślnie ukryty */
-    position: fixed;
-    z-index: 1000;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    overflow: auto;
-    background-color: rgba(0,0,0,0.4);
-  }
-  
-  #noteFormContainer {
-    background-color: #fff;
-    margin: 10% auto;
-    padding: 20px;
-    width: 300px;
-    border-radius: 8px;
-  }
-  
-  label {
-    display: block;
-    margin-top: 10px;
-  }
-  
-  input[type="text"], textarea, select {
-    width: 100%;
-    padding: 8px;
-    margin-top: 5px;
-    box-sizing: border-box;
-  }
-  
-  textarea {
-    resize: vertical;
-  }
-  
-  .note {
-    border: 1px solid;
-    box-sizing: border-box;
-    aspect-ratio: 1 / 1;
-    margin-bottom: 20px;
-    border-radius: 8px;
-    background-color: color-mix(in srgb, var(--note-color) 50%, transparent 50%);
-  }
-  
-  
-  .pinned {
-    border-color: #ff9800;
-  }
-  
-  #searchContainer {
-    margin: 20px 0;
-  }
-  
-  #notesContainer {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(100px, 15%));
+    padding: 10px 0;
+}
+.controls {
+    display: flex;
     gap: 10px;
     padding: 10px;
-  }
-  
-
-  
+    justify-content: center;
+    flex-wrap: wrap;
+    background: #fff;
+}
+.controls input {
+    padding: 5px;
+    width: 200px;
+    max-width: 100%;
+    box-sizing: border-box;
+}
+.note-form {
+    background: white;
+    padding: 10px;
+    margin: 10px auto;
+    max-width: 600px;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0,0,0,0.1);
+}
+.note-form input[type="text"],
+.note-form textarea,
+.note-form input[type="color"],
+.note-form input[type="datetime-local"] {
+    width: 100%;
+    margin: 5px 0;
+    padding: 5px;
+    box-sizing: border-box;
+}
+.note-form textarea {
+    resize: vertical;
+    min-height: 60px;
+}
+#tasks-container {
+    margin: 5px 0;
+}
+#tasks-list .task-input {
+    width: calc(100% - 10px);
+    margin: 3px 0;
+    padding: 5px;
+}
+.note-form button {
+    padding: 5px 10px;
+    margin-top: 5px;
+}
+.notes-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 10px;
+    padding: 10px;
+}
+.note-card {
+    position: relative;
+    background: white;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    padding: 10px;
+    word-wrap: break-word;
+    min-height: 50px;
+}
+.note-card .pin {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    cursor: pointer;
+    font-size: 18px;
+}
+.note-card .title {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+.note-card .content {
+    white-space: pre-wrap;
+    margin-bottom: 5px;
+}
+.note-card .tags {
+    font-size: 0.9em;
+    color: #555;
+    margin-bottom: 5px;
+}
+.note-card .tasks {
+    list-style: none;
+    padding: 0;
+    margin: 5px 0;
+}
+.note-card .tasks li {
+    display: flex;
+    align-items: center;
+}
+.note-card .tasks li input[type=checkbox] {
+    margin-right: 5px;
+}
+.note-card .actions {
+    margin-top: 5px;
+    text-align: right;
+}
+.note-card .actions button {
+    margin-left: 5px;
+}

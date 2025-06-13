@@ -1,14 +1,24 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pl">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Slider z przenikaniem i kropkami</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <main>
-        <section class="slider"></section>
-    </main>
-    <script src="js.js"></script>
+    <div id="slider-container">
+        <button id="leftArrow" class="arrow">&lt;=</button>
+        <button id="rightArrow" class="arrow">=&gt;</button>
+        <div id="slider">
+            <div class="slider-track"></div>
+        </div>
+        <div id="dots" class="hidden"></div>
+    </div>
+    <div id="controls">
+        <button id="modeBtn">Animacja</button>
+        <button id="stopBtn">Stop</button>
+    </div>
+    <script src="script.js"></script>
 </body>
-</html> 
+</html>

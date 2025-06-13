@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <title>Animacja kulek na Canvas</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <h1>Kulki Canvas - Animacja</h1>
+  <div id="controls">
+    <div>
+      <label for="versionSelect">Wersja animacji:</label>
+      <select id="versionSelect">
+        <option value="1">Nic się nie działo...</option>
+        <option value="2">Task Failed Successfully</option>
+        <option value="3">Męczy nas piłka</option>
+      </select>
+    </div>
+    <div>
+      <label for="numBalls">Liczba kulek (X):</label>
+      <input type="number" id="numBalls" min="1" max="200" value="50">
+    </div>
+    <div>
+      <label for="thresholdPercent">Odległość do linii (Y) [% szerokości]:</label>
+      <input type="range" id="thresholdPercent" min="1" max="100" value="20">
+      <span id="thresholdPercentValue">20%</span>
+    </div>
+    <div id="v2Controls" class="versionControls">
+      <label for="interactionStrength">Siła interakcji myszy:</label>
+      <input type="range" id="interactionStrength" min="-10" max="10" value="5" step="0.1">
+      <span id="interactionStrengthValue">5</span>
+    </div>
+    <div id="v3Controls" class="versionControls">
+      <label for="forceX">Współczynnik X:</label>
+      <input type="range" id="forceX" min="0" max="10" value="1" step="0.1">
+      <span id="forceXValue">1</span><br>
+      <label for="forceY">Współczynnik Y:</label>
+      <input type="range" id="forceY" min="0" max="10" value="1" step="0.1">
+      <span id="forceYValue">1</span>
+    </div>
+    <div>
+      <button id="startBtn">Start</button>
+      <button id="resetBtn">Reset</button>
+    </div>
+  </div>
+  <canvas id="canvas" width="800" height="600"></canvas>
+  <script src="main.js"></script>
+</body>
+</html>

@@ -1,13 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="site.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ball in the Hole</title>
+  <link rel="stylesheet" href="site.css" />
 </head>
 <body>
-    <canvas id="gameCanvas"></canvas>
-    <script src = main.js></script>
+  <canvas id="gameCanvas"></canvas>
+  <div id="overlay" class="overlay hidden">
+    <div class="overlay-content">
+      <h1 id="overlay-title">LEVEL 1</h1>
+      <p id="overlay-time"></p>
+      <button id="btn-start">Start!</button>
+      <button id="btn-restart-level" class="hidden">Powtórz poziom</button>
+      <button id="btn-reset">Od początku</button>
+    </div>
+  </div>
+  <script src="main.js"></script>
 </body>
 </html>

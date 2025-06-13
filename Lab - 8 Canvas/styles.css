@@ -1,0 +1,22 @@
+body {
+  font-family: Arial, sans-serif;
+  background: #f5f5f5;
+  color: #333;
+}
+#controls {
+  margin-bottom: 10px;
+}
+#controls div {
+  margin: 5px 0;
+}
+label {
+  margin-right: 5px;
+}
+.versionControls {
+  display: none;
+  margin-top: 5px;
+}
+#canvas {
+  border: 1px solid #333;
+  background: #000;
+}
